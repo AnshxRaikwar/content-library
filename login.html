@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILMISTAAN - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-background">
+        <div class="login-container">
+            <div class="logo">
+                <h1>WELCOME TO FILMISTAAN</h1>
+            </div>
+            <div class="login-box">
+                <h2>Sign In</h2>
+                <form id="login-form">
+                    <div class="input-box">
+                        <input type="email" id="email-phone" placeholder="Email or phone number" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Sign In</button>
+                    <div class="help-options">
+                        <div>
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#">Need help?</a>
+                    </div>
+                </form>
+                <div class="signup-now"> 
+                    <p>New to FILMISTAAN? <a href="signup.html">Sign up now</a></p>
+                </div>
+                <div class="recaptcha-text">
+                    <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-item">
+            <h4>How do I reset my password?</h4>
+            <p>Click on "Need help?" on the login page, then follow the instructions to reset your password.</p>
+        </div>
+        <div class="faq-item">
+            <h4>What do I do if I forgot my email or phone number?</h4>
+            <p>Contact our support team through the "Need help?" link for assistance with your account recovery.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Can I use FILMISTAAN on multiple devices?</h4>
+            <p>Yes, you can use FILMISTAAN on multiple devices with your account. Please check our terms for device limits.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How can I update my payment information?</h4>
+            <p>Log in to your account and navigate to the payment settings to update your payment information.</p>
+        </div>
+    </div>
+
+    <!-- About Us Link -->
+    <div class="about-us"> 
+        <p> <a href="about us/about us.html">Learn more about us</a></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">Cookie Preferences</a></p>
+        <p>&copy; 2024 FILMISTAAN</p>
+    </footer>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Here you could add login validation/authentication
+
+            // Redirect to the homepage after "login"
+            window.location.href = "homePage.html";
+        });
+    </script>
+</body>
+</html>

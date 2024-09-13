@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILMISTAAN - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-background">
+        <div class="signup-container">
+            <div class="logo">
+                <h1>FILMISTAAN</h1>
+            </div>
+            <div class="signup-box">
+                <h2>Create an account</h2>
+                <form id="signup-form">
+                    <div class="input-box">
+                        <input type="text" id="username" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                    <div class="help-options">
+                        <p>Already have an account? <a href="login.html">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // Redirect to the home page after "signup"
+            window.location.href = "homePage.html";
+        });
+    </script>
+</body>
+</html>
